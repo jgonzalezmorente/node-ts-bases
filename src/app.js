@@ -7,6 +7,7 @@ getPokemonById( 4 )
     .catch( ( err ) => console.log( err ) )
     .finally( () => console.log( 'Finalmente') );
 
+    
 
 // token de acceso
 // Públicas
