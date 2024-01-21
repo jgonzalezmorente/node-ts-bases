@@ -1,0 +1,20 @@
+interface BuildMakePersonOptions {
+    getUUID: () => string;
+    getAge: ( birthdate: string ) => number
+}
+
+interface PersonOptions {
+    name: string;
+    birthdate: string
+}
+
+const buildMakeperson = ({ getUUID, getAge }: BuildMakePersonOptions ) => {
+    return ({ name, birthdate }: PersonOptions) => {
+        return {
+            id: getUUID(),
+            name,
+            birthdate,
+            age: getAge( birthdate )
+        }    
+    }
+}
